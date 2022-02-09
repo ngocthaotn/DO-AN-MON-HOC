@@ -1,0 +1,104 @@
+$color-line: #e0e0e0;
+$main: #ff8f00;
+
+@font-face {
+  font-family: 'Gabriola';
+  src: url(/assets/font/Gabriola.ttf);
+}
+
+//start button 
+.btn {
+  &-find {
+    &-about {
+      width: 150px;
+      height: 35px;
+      color: white;
+      background: transparent;
+      border: 1px solid white;
+      border-radius: 25px;
+      &:hover {
+        background: black;
+        border: 1px solid black;
+      }
+    }
+  }
+  &-signup {
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-weight: 500;
+    background: black;
+    border: none;
+    margin: 15px 0px;
+    border-radius: 5px;
+  }
+  &-addproducts {
+    text-align: center;
+    button {
+      width: 150px;
+      height: 35px;
+      background: white;
+      font-weight: 600;
+      border: 2px solid #212121;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      &:hover {
+        background:  #212121;
+        color: white;
+        border: none;
+      }
+    }
+  }
+  &-comment {
+    background: #212121;
+    color: white;
+    font-weight: 500;
+    width: 120px;
+    height: 35px;
+    i {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+    &:hover {
+      background: #616161;
+    }
+  }
+}
+//end button
+
+.message {
+  font-size: 18px;
+  text-align: center;
+}
+
+#go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  height: 35px;
+  width: 35px;
+  background: #424242;
+  background-image: url('../img/icon/uparrow.png');
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  &:hover {
+    background: #bdbdbd;
+    opacity: 0.5;
+    background-image: url('../img/icon/uparrow.png');
+  }
+}
+
+#go-to-top.show {
+  opacity: 0.8;
+}
+
+.search-dropdown {
+  background-color:rgba(0,0,0,0.4);
+  a {
+    color: white !important;
+    font-weight: 600;
+  }
+}

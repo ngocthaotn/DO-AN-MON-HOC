@@ -1,0 +1,18 @@
+.all-products {
+  margin-top: 87px;
+  .card {
+    border-top: 3px solid $main;
+    margin: 5px;
+    &-body {
+      a {
+        font-weight: 500;
+        color: black;
+        margin-left: 15px;
+        &:hover {
+          color: $main;
+        }
+      }
+
+    }
+  }
+} 

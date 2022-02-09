@@ -1,0 +1,19 @@
+<section class="container"> 
+  <div class="index-place all-products">
+    <form action="/auth/all-products" class="row">
+    {{#each results}}
+      <div class="card" style="width:270px">
+        <img class="card-img-top" src="{{this.linkimage}}" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">{{this.tieude}}</h4>
+          <p class="card-text">{{this.trichdan}}</p>
+          <a href="/auth/products/{{this.id}}" >Chi tiết</a>
+          <a href="/auth/update-products/{{this.id}}" >Chỉnh sửa</a>
+          <a href="/auth/delete-products/{{this.id}}"  onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
+        </div>
+      </div>
+    {{/each}}
+    </form>
+  </div>
+</section>
+

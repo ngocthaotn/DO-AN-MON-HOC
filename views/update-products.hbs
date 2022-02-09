@@ -1,0 +1,35 @@
+<section class="container">
+  <div class="add-products">
+    <form action="/auth/update-products" method="POST">
+      {{#if message}}
+        <h4 class="alert alert-warning message">{{ message }}</h4>
+      {{/if}}
+      {{#each prod}}
+        <h4 class="text-center">CHỈNH SỬA BÀI VIẾT</h4>
+        <input type="hidden" name="id" value="{{this.id}}">
+        <div class="form-group">
+          <label for="tieu-de"><strong>Tiêu đề:</strong></label>
+          <input type="text" class="form-control" placeholder="Nhập tiêu đề..." id="tieude" name="tieude" value="{{this.tieude}}">
+        </div>
+        <div class="form-group">
+          <label for="trich-dan"><strong>Trích dẫn:</strong></label>
+          <input type="text" class="form-control" placeholder="Nhập trích dẫn bài viết..." id="trichdan" name="trichdan" value="{{this.trichdan}}">
+        </div>
+        <div class="form-group">
+          <label for="noi-dung"><strong>Nội dung:</strong></label>
+          <input type="text" class="form-control" placeholder="Nhập nội dung..." id="noidung" name="noidung" value="{{this.noidung}}">
+        </div>
+        <div class="form-group">
+          <label for="link-page"><strong>Link page:</strong></label>
+          <input type="text" class="form-control" placeholder="Nhập link page..." id="linkpage" name="linkpage" value="{{this.linkpage}}">
+        </div>
+        <div class="form-group">
+          <label for="link-image"><strong>Link image:</strong></label>
+          {{!-- <input type="text" class="form-control" placeholder="Nhập link image..." id="linkimage" name="linkimage" value="{{this.linkimage}}"> --}}
+          <input class="form-control" type="file" name="linkimage" accept="" value="{{this.linkimage}}"/>
+        </div>
+        <div class="btn-addproducts"><button type="submit">CHỈNH SỬA</button></div>
+      {{/each}}
+    </form>
+  </div>
+</section>

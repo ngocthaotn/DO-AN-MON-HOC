@@ -1,0 +1,32 @@
+<section class="container">
+  <div class="add-products">
+    <form action="/auth/add-products" method="POST" enctype="multipart/form-data">
+    {{#if message}}
+      <h4 class="alert alert-warning message">{{ message }}</h4>
+    {{/if}}
+      <h4 class="text-center">THÊM BÀI VIẾT</h4>
+      <div class="form-group">
+        <label for="tieu-de"><strong>Tiêu đề:</strong></label>
+        <input type="text" class="form-control" placeholder="Nhập tiêu đề..." id="tieude" name="tieude">
+      </div>
+      <div class="form-group">
+        <label for="trich-dan"><strong>Trích dẫn:</strong></label>
+        <input type="text" class="form-control" placeholder="Nhập trích dẫn bài viết..." id="trichdan" name="trichdan">
+      </div>
+      <div class="form-group">
+        <label for="noi-dung"><strong>Nội dung:</strong></label>
+        <textarea type="text" class="form-control" placeholder="Nhập nội dung..." id="noidung" name="noidung"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="link-page"><strong>Link page:</strong></label>
+        <input type="text" class="form-control" placeholder="Nhập link page..." id="linkpage" name="linkpage">
+      </div>
+      <div class="form-group">
+        <label for="link-image"><strong>Link image:</strong></label>
+        {{!-- <input type="text" class="form-control" placeholder="Nhập link image..." id="linkimage" name="linkimage"> --}}
+        <input class="form-control" type="file" name="linkimage" accept=""/>
+      </div>
+      <div class="btn-addproducts"><button type="submit" value="Upload">THÊM</button></div>
+    </form>
+  </div>
+</section>

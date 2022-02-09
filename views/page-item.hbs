@@ -1,0 +1,64 @@
+<section class="pageitem">
+  <div class="container">
+    <form action="/auth/products/{{this.id}}">
+
+      {{#each prod}}
+      <div class="row pageitem-details">
+        <div class="col-7">
+            <h1>{{this.tieude}}</h1>
+            <p>{{this.noidung}}</p>
+        </div>
+        
+        <div class="pageitem-img col-5">
+          <img class="img-fluid" src="{{this.linkimage}}">
+        </div>
+      </div>  
+      {{/each}}
+
+      <div>
+        <h3>Bình luận</h3>
+        <form method="POST" onsubmit="return doComment(this);">
+          {{#each prod}}
+          <div class="form-group">
+            <input type="hidden" name="{{this.id}}" value="{{this.id}}">
+          </div>
+          {{/each}}
+          <div class="form-group">
+            <label for="name">Tên người dùng:</label>
+            <input type="text" class="form-control" placeholder="Nhập tên người dùng..." name="username">
+          </div>
+          <div class="form-group">
+            <label for="message">Viết bình luận:</label>
+            <textarea type="text" class="form-control" name="comment"></textarea>
+          </div>   
+          <div><button class="btn-comment" type="submit">Bình luận<i class="fas fa-paper-plane"></i></button> </div>
+        </form>
+      </div>
+
+      <script>
+        function doComment(form) {
+          $.ajax ({
+            url: "/do-comment",
+            method: "POST",
+            data: {username: form.username.value, comment: form.username.value, products_id: form.products_id.value},
+            success: function (res) {
+              alert (res);
+            }
+          });
+          return false;
+        }
+      </script>
+
+      {{!-- <form action="/do-comment">
+          {{#each results}}
+          <div class="card-body">
+            <h5 class="card-title">{{this.username}}</h5>
+            <h6 class="card-subtitle">{{this.date}}</h6>
+            <h6 class="card-subtitle">{{this.comment}}</h6>
+          </div>
+          {{/each}}
+      </form> --}}
+      
+    </form>
+  </div>
+</section>

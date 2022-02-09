@@ -1,0 +1,48 @@
+.footer {
+  margin-top: 50px;
+  padding-bottom: 15px;
+  &-icon {
+    &-bottom {
+      text-align: right;
+      font-size: 32px;
+    }
+  }
+  &-images {
+    .col-md-4 {
+      padding: 5px;
+    }
+  }
+  &-use-link {
+    p {
+      margin-bottom: 5px;
+      a {
+        color: black;
+        &:hover {
+          color:#f9a825 ;
+        }
+      }
+    }
+    p:first-child {
+      margin-bottom: 15px;
+    }
+  }
+  &-location {
+    margin-left: 20px;
+  }
+  &-information {
+    p {
+      margin-bottom: 5px;
+    }
+    i {
+      font-size: 13px;
+      margin-right: 10px;
+    }
+  }
+  &-copyright {
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  &-txt-ins {
+    margin-left: -10px;
+  }
+}

@@ -1,0 +1,165 @@
+.pages {
+  &-about {
+    position: relative;
+    padding-top: 100px;
+    background: linear-gradient(360deg, #FFFFFF 0%, transparent 100%), #f9f9f9;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background-image: url('/img/stock/curve-shape-top.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &-content {
+      margin-bottom: 50px;
+      p {
+        margin: 0px;
+        &:first-child {
+          font-family: 'Gabriola';
+          font-size: 35px;
+          font-weight: 500;
+          color:#f9a825 ;
+          height: 35px;
+        }
+        &:nth-child(2) {
+          font-size: 30px;
+          font-weight: 600;
+        }
+        &:nth-child(3) {
+          font-size: 20px;
+        }
+      }
+    }
+    &-textintro {
+      margin: auto;
+      text-align: center;
+    }
+    &-image {
+      margin-left: 100px;
+    }
+  }
+  &-carousel {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  &-top {
+    text-align: -webkit-center;
+    .col-md-6 {
+      padding: 0px;
+    }
+    &-img {
+      position:relative;
+      width:270px;
+      height:400px;
+      background-size:100%;
+      background-position:center;
+      transition:0.5s;
+      &:hover {
+        background-size:110%;
+      }
+      &:after {
+        position:absolute;
+        top:100%;
+        bottom:0;
+        left:0;
+        right:0;
+        white-space:pre-wrap;
+        overflow:hidden;
+        background-color:rgba(0,0,0,0.4);
+        color:#fff;
+        padding:0 8px;
+        opacity:0;
+        content:attr(data-text);
+        transition:0.5s;
+      }
+      &:hover:after {
+        opacity:1;
+        top:0;
+        padding: 320px 8px 8px 8px;
+      }
+      &:first-line{
+        color:#fff;
+        font-weight: 500;
+        font-size: 22px;
+      }
+      &-1 {
+        background-image: url("/img/coming/cafe-katinat.jpg");
+      }
+      &-2 {
+        background-image: url("/img/coming/the-coffee-house.jpg");
+      }
+      &-3 {
+        background-image: url("/img/coming/Starbucks_leeds.jpg");
+      }
+      &-4 {
+        background-image: url("/img/coming/chanchamayo-coffee.jpg");
+      }
+    } 
+    &-city {
+      margin-top: 50px;
+      a:hover {
+        text-decoration: none;
+        h4 {
+          color: #f9a825;
+        }
+      }
+      .card {
+        width: 180px;
+        &-body {
+          padding: 15px;
+        }
+        &-title {
+          color: black;
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        &-text {
+          color: black;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &-place {
+    margin-bottom: 50px;
+    a {
+      padding-bottom: 15px;
+      padding-right: 0px;
+      &:hover {
+        text-decoration: none;
+        .card-title {
+          color:  #f9a825;
+        }
+      }
+    }
+    .card {
+      border-top: 3px solid $main;
+      overflow: hidden;
+      &-title {
+        color: black;
+        font-size: 20px;
+      }
+      &-text {
+        color: #9e9e9e;
+        font-size: 16px;
+      }
+      &-img-top {
+        // transition: transform .5s ease;
+        transition: .5s all;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  
+}
+
+/*
+NOTE:
+  -Khoảng cách giữa các section: 50px
+*/

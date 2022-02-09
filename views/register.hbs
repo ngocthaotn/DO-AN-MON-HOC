@@ -1,0 +1,27 @@
+<section>
+  <div class="register-message">
+    {{#if message}}
+      <h4 class="alert alert-warning message">{{ message }}</h4>
+    {{/if}}
+  </div>
+
+  <form action="/auth/register" method="POST">
+    <div class="register">
+      <div class="login-form register-form">
+        <div class="modal-header">
+          <h4 class="modal-title">ĐĂNG KÍ</h4>
+        </div>
+        <div><input class="modal-input-user" id="dk-name" placeholder="Họ và tên" type="text" name="name"></div>
+        <div><input class="modal-input-user" id="dk-email" placeholder="Email" type="email" name="email"></div>
+        <div><input class="modal-input-password" id="dk-password" placeholder="Mật khẩu" type="password" name="password"></div>
+        <div><input class="modal-input-password" id="dk-passwordConfirm" placeholder="Nhập lại mật khẩu" type="password" name="passwordConfirm"></div>
+        <div class="">
+          <button type="submit" class="btn-signup" data-dismiss="modal">ĐĂNG KÍ</button>
+        </div>
+        <div class="modal-policy">
+          <p>Khi đăng kí, bạn đồng ý với <a href="#"><u>Chính sách bảo mật</u></a> và <a href="#"><u>Điều khoản bảo mật</u></a> của chúng tôi.</p>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>

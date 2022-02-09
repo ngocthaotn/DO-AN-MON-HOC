@@ -1,0 +1,38 @@
+<section>
+  <div class="login-message">
+    {{#if message}}
+      <h4 class="alert alert-warning message">{{ message }}</h4>
+    {{/if}}
+  </div>
+
+  <form action="/auth/login" method="POST">
+    <div class="login">
+      <div class="login-form">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">ĐĂNG NHẬP</h4>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div>
+            <div><input class="modal-input-user" id="dk-email" placeholder="Email" type="email" name="email"></div>
+            <div><input class="modal-input-password" id="dk-password" placeholder="Mật khẩu" type="password" name="password"></div>
+        </div>
+        <div class="modal-forgot-pass">
+            <a href="#">Bạn quên mật khẩu?</a>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button class="modal-btn-signin" type="submit">ĐĂNG NHẬP</button>
+          <div class="modal-policy">
+            <p>Khi đăng nhập, bạn đồng ý với <a href="#"><u>Chính sách bảo mật</u></a> và <a href="#"><u>Điều khoản bảo mật</u></a> của chúng tôi.</p>
+          </div>
+          <p class="modal-txt-signup">Nếu bạn chưa có tài khoản? Hãy <a href="/register">đăng kí</a></p>
+        </div>
+        
+      </div>  
+    </div> 
+  </form>
+</section>
+
+
